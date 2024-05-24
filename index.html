@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-gray-100 px-16 py-6">
+    <h1 class="text-5xl font-bold text-center my-3">Shopping Cart</h1>
+    <h2 class="text-2xl font-bold text-left my-6">Add Item for selection</h2>
+
+    <form action="" id="form" class="flex gap-3 justify-start items-center">
+      <!--Product Name-->
+      <div>
+        <label for="product_name">Product Name:</label>
+        <input
+          id="productName"
+          type="text"
+          class="border border-gray-300 rounded-md mx-3"
+        />
+      </div>
+
+      <!--Price-->
+      <div>
+        <label for="price">Price:</label>
+        <input
+          type="number"
+          id="price"
+          min="0"
+          step="1"
+          class="border border-gray-300 rounded-md w-44 mx-3"
+        />
+      </div>
+
+      <!--IMG-->
+      <div>
+        <div>
+          <label for="imgurl">Image URL:</label>
+          <input
+            type="url"
+            id="imgurl"
+            class="border border-gray-300 rounded-md mx-3"
+          />
+        </div>
+      </div>
+
+      <!--btn create-->
+      <button
+        type="submit"
+        class="btn btn-primary"
+      >
+        Create Product
+      </button>
+    
+    </form>
+    <!-- displaySection -->
+    <section
+      id="displaySection"
+      class="mt-6 mx-auto space-y-4 sr"
+    ></section>
+
+    <button
+      id="addbtn"
+      class="btn btn-primary m-3"
+    >
+      Add to Cart
+    </button>
+    <section id="displayCart" class="mt-6 mx-auto space-y-4"></section>
+    <div id="btnCal"></div>
+    <!-- <h2 id="total">You have to pay:</h2> -->
+    <div id="totalSection"></div>
+    <script src="./script.js"></script>
+
+    <!-- <div class="flex flex-row w-3/4">
+  <input type="checkbox" class="mx-10">
+<img src="https://www.onceuponachef.com/images/2012/11/Vanilla-Birthday-Cake-18-1200x1480.jpg" class="w-28 h-28 object-contain">
+<div>
+  <span class="flex justify-start items-center text-2xl mx-6">product</span>
+  <span class="text-xl flex justify-start mx-6">$12</span>
+</div>
+</div> -->
+
+  </body>
+</html>
